@@ -22,3 +22,6 @@ nnoremap ; :
 imap <Up> <C-o>gk
 imap <Down> <C-o>gj
 
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
