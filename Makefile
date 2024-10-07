@@ -26,9 +26,7 @@ endif
 	ln -sf ~/dotfiles/config ~/.ssh/config
 	ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 	ln -sf ~/dotfiles/.gitignore ~/.gitignore
-	mkdir -p ~/.config/nvim
 	ln -sf ~/dotfiles/.vimrc ~/.vimrc
-	ln -sf ~/dotfiles/init.vim ~/.config/nvim/init.vim
 	ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 	ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
 
