@@ -1,0 +1,11 @@
+[user]
+  name = Bilal Khan
+  email = bilal2vec@gmail.com
+[core]
+	excludesfile = ~/dotfiles/.gitignore
+  editor = vim
+[commit]
+	gpgSign = true
+[push]
+  autoSetupRemote = true
+

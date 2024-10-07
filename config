@@ -1,0 +1,5 @@
+Host linux.student.cs.uwaterloo.ca
+    HostName linux.student.cs.uwaterloo.ca
+    IdentityFile ~/.ssh/id_rsa
+    User b54khan
+
