@@ -13,7 +13,7 @@ setup_Linux:
 	chmod +x install.sh
 	./install.sh -y
 	rm install.sh
-	apt install -y zsh wget vim tmux eza bat gnupg colordiff yq fzf libxcb-cursor0 htop
+	apt install -y zsh wget vim tmux exa bat gnupg colordiff fzf libxcb-cursor0 htop
 
 install: setup_$(OS)
 ifeq ($(OS), Linux)
