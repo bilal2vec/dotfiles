@@ -32,4 +32,5 @@ node_modules/
 
 *.nsys-rep
 *.ncu-rep
-
+ 
+secrets.env
