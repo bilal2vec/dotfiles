@@ -13,7 +13,11 @@ setup_Linux:
 	chmod +x install.sh
 	./install.sh -y
 	rm install.sh
-	apt install -y zsh wget vim tmux exa bat gnupg colordiff fzf libxcb-cursor0 htop
+	apt install -y zsh wget vim tmux bat gnupg colordiff fzf libxcb-cursor0 htop
+  wget -c https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz -O - | tar xz
+  chmod +x eza
+  chown root:root eza
+  mv eza /usr/local/bin/eza
 
 install: setup_$(OS)
 ifeq ($(OS), Linux)
