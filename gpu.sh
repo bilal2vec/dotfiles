@@ -13,7 +13,7 @@ fi
 sudo apt-get install -y nvidia-container-toolkit
 sudo systemctl restart docker
 
-sudo usermod -aG docker \$USER
+sudo usermod -aG docker $USER
 newgrp docker
 
 echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin

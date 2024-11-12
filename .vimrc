@@ -25,3 +25,5 @@ imap <Down> <C-o>gj
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
+filetype on
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0

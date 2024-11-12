@@ -41,3 +41,4 @@ alias gp='git push'
 alias gd='git diff'
 alias gl='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
 
+export PATH="${HOME}/.local/bin:$PATH"

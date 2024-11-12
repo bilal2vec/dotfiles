@@ -4,7 +4,9 @@ setup_Darwin:
 	-xcode-select --install
 	sudo true
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-	brew install wget vim tmux starship eza bat gnupg pygments gh colordiff yq fzf
+	brew install wget vim tmux starship eza bat gnupg pygments gh colordiff yq fzf docker koekeishiya/formulae/yabai
+	yabai
+	yabai --start-service
 
 setup_Linux:
 	apt update
