@@ -14,11 +14,9 @@ sudo apt-get install -y nvidia-container-toolkit
 sudo systemctl restart docker
 
 sudo usermod -aG docker $USER
+
+sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+sudo docker pull $DOCKER_IMAGE
+
 newgrp docker
-
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-
-docker pull $DOCKER_IMAGE
-
-docker run --cap-add=SYS_ADMIN --gpus all -it $DOCKER_IMAGE zsh
 
