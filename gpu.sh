@@ -16,6 +16,9 @@ sudo systemctl restart docker
 sudo usermod -aG docker $USER
 newgrp docker
 
-echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 docker pull $DOCKER_IMAGE
+
+docker run --cap-add=SYS_ADMIN --gpus all -it $DOCKER_IMAGE zsh
+
