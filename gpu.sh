@@ -1,9 +1,5 @@
 #!/bin/bash
 
-DOCKER_IMAGE=$1
-DOCKER_USERNAME=$2
-DOCKER_PASSWORD=$3
-
 sudo apt-get update
 
 if ! command -v docker &> /dev/null; then
