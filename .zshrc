@@ -28,6 +28,8 @@ export GPG_TTY=$(tty)
 # fzf
 source <(fzf --zsh)
 
+sudo yabai --load-sa
+
 # general aliases
 alias ..='cd ..'
 alias ls='eza -al'
