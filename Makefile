@@ -29,12 +29,13 @@ endif
 	touch ~/.hushlogin
 	ln -sf ~/dotfiles/.zshrc ~/.zshrc
 
-	ln -sf ~/dotfiles/config ~/.ssh/config
+	ln -sf ~/dotfiles/.ssh/config ~/.ssh/config
 	ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 	ln -sf ~/dotfiles/.gitignore ~/.gitignore
 	ln -sf ~/dotfiles/.vimrc ~/.vimrc
 	ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 	ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
+	ln -sf ~/dotfiles/ghostty/config ~/.config/ghostty/config
 
 	curl -LsSf https://astral.sh/uv/install.sh | sh
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
