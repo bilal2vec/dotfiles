@@ -4,7 +4,7 @@ setup_Darwin:
 	-xcode-select --install
 	sudo true
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
-	brew install wget vim tmux starship eza bat gnupg pygments gh colordiff yq fzf docker koekeishiya/formulae/yabai ghostty
+	brew install wget neovim tmux starship eza bat gnupg pygments gh colordiff yq fzf docker koekeishiya/formulae/yabai ghostty
 	yabai
 	yabai --start-service
 
@@ -15,7 +15,7 @@ setup_Linux:
 	chmod +x install.sh
 	./install.sh -y
 	rm install.sh
-	apt install -y zsh wget vim tmux bat gnupg colordiff fzf libxcb-cursor0 htop
+	apt install -y zsh wget vim neovim tmux bat gnupg colordiff fzf libxcb-cursor0 htop
 	wget -c https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz -O - | tar xz
 	chmod +x eza
 	chown root:root eza
@@ -27,12 +27,14 @@ ifeq ($(OS), Linux)
 endif
 	curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 	touch ~/.hushlogin
+	mkdir -p ~/.config/nvim
 	ln -sf ~/dotfiles/.zshrc ~/.zshrc
 
 	ln -sf ~/dotfiles/.ssh/config ~/.ssh/config
 	ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 	ln -sf ~/dotfiles/.gitignore ~/.gitignore
 	ln -sf ~/dotfiles/.vimrc ~/.vimrc
+	ln -sf ~/dotfiles/init.vim ~/.config/nvim/init.vim
 	ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 	ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
 	ln -sf ~/dotfiles/ghostty/config ~/.config/ghostty/config
@@ -41,5 +43,6 @@ endif
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 	nvm install node
-
-  -sudo usermod -aG docker $USER
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  
+	-sudo usermod -aG docker $USER
