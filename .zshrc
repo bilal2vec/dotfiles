@@ -28,8 +28,6 @@ export GPG_TTY=$(tty)
 # fzf
 source <(fzf --zsh)
 
-sudo yabai --load-sa
-
 # general aliases
 alias ..='cd ..'
 alias ls='eza -al'
@@ -41,7 +39,7 @@ alias gs='git status'
 alias gc='git commit'
 alias gp='git push'
 alias gd='git diff'
-alias gl='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
+alias gl='git log --pretty=format:"%h%x09%an%x09%ad%x09%s%x09%d%Creset"'
 alias vim='nvim'
 
 export PATH="${HOME}/.local/bin:$PATH"

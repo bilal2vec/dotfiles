@@ -32,5 +32,12 @@ node_modules/
 
 *.nsys-rep
 *.ncu-rep
- 
+
+*.synctex.gz
+*.aux
+*.fdb_latexmk
+*.fls
+*.pre
+*.toc
+
 secrets.env
